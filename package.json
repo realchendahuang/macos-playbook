@@ -1,0 +1,35 @@
+{
+  "name": "macos-best-practices",
+  "version": "0.1.0",
+  "private": true,
+  "description": "陈大黄的 macOS 软件推荐清单。",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "packageManager": "pnpm@10.28.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "typecheck": "tsc --noEmit --skipLibCheck --lib ES2022,WebWorker --types ./worker-configuration src/worker.ts",
+    "worker:dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/realchendahuang/macos-best-practices.git"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.40.0",
+    "astro": "^6.4.7",
+    "lucode-starlight": "^0.1.6",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "wrangler": "^4.56.0"
+  }
+}

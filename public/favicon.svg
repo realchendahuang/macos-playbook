@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="macOS Best Practices">
+  <rect width="64" height="64" rx="14" fill="#111827"/>
+  <circle cx="22" cy="24" r="5" fill="#38bdf8"/>
+  <circle cx="42" cy="24" r="5" fill="#f97316"/>
+  <path fill="#f9fafb" d="M18 38c4 6 9 9 14 9s10-3 14-9H18Z"/>
+  <path fill="#94a3b8" d="M29 13h6v20h-6z"/>
+</svg>
