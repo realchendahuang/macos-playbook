@@ -2,7 +2,7 @@
   "name": "macos-best-practices",
   "version": "0.1.0",
   "private": true,
-  "description": "陈大黄的 macOS 软件推荐清单。",
+  "description": "一份帮助普通人真正把 macOS 用顺手的中文最佳实践手册。",
   "type": "module",
   "engines": {
     "node": ">=22.12.0"

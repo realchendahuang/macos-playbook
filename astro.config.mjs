@@ -3,18 +3,18 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import lucode from 'lucode-starlight';
 
-// 文档站只保留软件清单，避免把帖子写成冗长说明书。
+// 文档站保持单页手册形态，所有核心内容都收敛到首页。
 export default defineConfig({
 	site: 'https://macos-best-practices.chendahuang.top',
 	integrations: [
 		starlight({
-			title: 'macOS Best Practices',
-			description: '陈大黄的 macOS 软件推荐清单。',
+			title: 'macOS 高效使用手册',
+			description: '一份帮助普通人真正把 macOS 用顺手的中文最佳实践手册。',
 			routeMiddleware: ['./src/starlightRouteData.ts'],
 			plugins: [
 				lucode({
 					navLinks: [
-						{ label: '软件清单', link: '/software/' },
+						{ label: '手册', link: '/' },
 					],
 				}),
 			],
@@ -34,21 +34,9 @@ export default defineConfig({
 			],
 			sidebar: [
 				{
-					label: '软件',
+					label: '手册',
 					items: [
-						{ label: '画廊', slug: 'software' },
-						{ label: 'QuickRecorder', slug: 'software/quickrecorder' },
-						{ label: 'ClashParty', slug: 'software/clashparty' },
-						{ label: 'V2rayN', slug: 'software/v2rayn' },
-						{ label: '豆包输入法', slug: 'software/doubao-input' },
-						{ label: 'Brave', slug: 'software/brave' },
-						{ label: 'Mos', slug: 'software/mos' },
-						{ label: 'Amphetamine', slug: 'software/amphetamine' },
-						{ label: 'UU 远程', slug: 'software/uu-remote' },
-						{ label: 'Tencent Lemon', slug: 'software/tencent-lemon' },
-						{ label: 'Mole', slug: 'software/mole' },
-						{ label: 'Tailscale', slug: 'software/tailscale' },
-						{ label: 'Obsidian', slug: 'software/obsidian' },
+						{ label: 'macOS 高效使用手册', slug: 'index' },
 					],
 				},
 			],
