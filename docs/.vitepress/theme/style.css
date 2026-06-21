@@ -145,7 +145,7 @@
 
 .quick-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
   margin: 20px 0 8px;
 }
@@ -232,4 +232,35 @@
   .quick-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+@media (min-width: 1101px) and (max-width: 1400px) {
+  .quick-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Mermaid 图表容器 */
+.vp-doc .mermaid-wrapper {
+  margin: 24px 0;
+  padding: 20px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+  overflow-x: auto;
+}
+
+.vp-doc .mermaid-wrapper > div {
+  display: flex;
+  justify-content: center;
+}
+
+/* 自定义容器优化 */
+.vp-doc .custom-block {
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.vp-doc .custom-block-title {
+  font-weight: 600;
 }

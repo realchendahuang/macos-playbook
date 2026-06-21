@@ -5,7 +5,7 @@ const readmePath = new URL('../README.md', import.meta.url)
 
 const readmeIntro = `# macOS Playbook
 
-别人告诉你 Mac 装什么软件，我告诉你 Mac 到底应该怎么用。
+个人 macOS 使用经验记录。从零上手到用顺手——一份写给普通人的 macOS 实战指南。
 
 在线阅读：[macos-playbook.chendahuang.top](https://macos-playbook.chendahuang.top/)
 
@@ -13,31 +13,27 @@ const readmeIntro = `# macOS Playbook
 
 \`\`\`mermaid
 flowchart TD
-  A[macOS Playbook] --> B[迁移心智]
-  A --> C[系统模型]
-  A --> D[日常效率]
-  A --> E[开发与 AI Coding]
-  A --> F[安全备份]
-  A --> G[工具边界]
+  A[macOS Playbook] --> B[软件推荐]
+  A --> C[macOS 上手]
+  A --> D[跨设备协作]
+  A --> E[效率工具链]
+  A --> F[开发与 AI]
+  A --> G[系统维护与排查]
+  A --> H[安全与备份]
+  A --> I[换机与迁移]
 \`\`\`
 `
 
 const toc = `## 目录
 
-- [1. 新手路线图](#1-新手路线图)
-- [2. 从 Windows 切到 macOS](#2-从-windows-切到-macos)
-- [3. macOS 心智模型](#3-macos-心智模型)
-- [4. 初次设置清单](#4-初次设置清单)
-- [5. 快捷键体系](#5-快捷键体系)
-- [6. Finder 与文件管理](#6-finder-与文件管理)
-- [7. 窗口、桌面空间与多任务](#7-窗口桌面空间与多任务)
-- [8. Spotlight 与搜索启动](#8-spotlight-与搜索启动)
-- [9. 截图、录屏、输入与文本](#9-截图录屏输入与文本)
-- [10. 终端、开发与 AI Coding](#10-终端开发与-ai-coding)
-- [11. 安全、隐私、备份与存储](#11-安全隐私备份与存储)
-- [12. 软件选择边界](#12-软件选择边界)
-- [13. 常见问题排查](#13-常见问题排查)
-- [14. 官方资料与延伸阅读](#14-官方资料与延伸阅读)
+- [1. 软件推荐](#1-软件推荐)
+- [2. macOS 上手](#2-macos-上手)
+- [3. 跨设备协作](#3-跨设备协作)
+- [4. 效率工具链](#4-效率工具链)
+- [5. 开发与 AI](#5-开发与-ai)
+- [6. 系统维护与故障排查](#6-系统维护与故障排查)
+- [7. 安全与备份](#7-安全与备份)
+- [8. 换机与迁移](#8-换机与迁移)
 `
 
 const source = await readFile(sourcePath, 'utf8')
@@ -52,6 +48,16 @@ const body = source
   .replace(/^(#{3,4})\s+<[^>]+class="cat-icon"[^>]*\/>\s+/gm, '$1 ')
   // GitHub 不需要 VitePress 的自定义标题锚点。
   .replace(/[ \t]+\{#[^}]+}[ \t]*$/gm, '')
+  // VitePress 自定义容器转成 GitHub blockquote。
+  // ::: tip / ::: info → > **提示**
+  // ::: warning → > **注意**
+  // ::: danger → > **警告**
+  // ::: details → > **详情**
+  .replace(/::: tip\n([\s\S]*?)\n:::/g, (_, content) => `> **提示**\n>\n> ${content.replace(/\n/g, '\n> ')}`)
+  .replace(/::: info\n([\s\S]*?)\n:::/g, (_, content) => `> **说明**\n>\n> ${content.replace(/\n/g, '\n> ')}`)
+  .replace(/::: warning\n([\s\S]*?)\n:::/g, (_, content) => `> **注意**\n>\n> ${content.replace(/\n/g, '\n> ')}`)
+  .replace(/::: danger\n([\s\S]*?)\n:::/g, (_, content) => `> **警告**\n>\n> ${content.replace(/\n/g, '\n> ')}`)
+  .replace(/::: details\n([\s\S]*?)\n:::/g, (_, content) => `> **详情**\n>\n> ${content.replace(/\n/g, '\n> ')}`)
   .trim()
 
 await writeFile(readmePath, `${readmeIntro}\n${toc}\n${body}\n`, 'utf8')
