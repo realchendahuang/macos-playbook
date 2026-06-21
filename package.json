@@ -1,8 +1,8 @@
 {
-  "name": "macos-best-practices",
+  "name": "macos-playbook",
   "version": "0.1.0",
   "private": true,
-  "description": "一份帮助普通人真正把 macOS 用顺手的中文最佳实践手册。",
+  "description": "一份帮助普通人真正把 macOS 用顺手的中文实战手册。",
   "type": "module",
   "engines": {
     "node": ">=22.12.0"
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/realchendahuang/macos-best-practices.git"
+    "url": "https://github.com/realchendahuang/macos-playbook.git"
   },
   "devDependencies": {
     "lucide-vue-next": "^1.0.0",

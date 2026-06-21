@@ -1,6 +1,6 @@
 {
 	"$schema": "./node_modules/wrangler/config-schema.json",
-	"name": "macos-best-practices",
+	"name": "macos-playbook",
 	"compatibility_date": "2026-06-20",
 	"assets": {
 		"directory": "./docs/.vitepress/dist",
@@ -9,7 +9,7 @@
 	},
 	"routes": [
 		{
-			"pattern": "macos-best-practices.chendahuang.top",
+			"pattern": "macos-playbook.chendahuang.top",
 			"custom_domain": true
 		}
 	],
