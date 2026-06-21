@@ -5,7 +5,7 @@ const readmePath = new URL('../README.md', import.meta.url)
 
 const readmeIntro = `# macOS Playbook
 
-个人 macOS 使用经验记录。从零上手到用顺手——一份写给普通人的 macOS 实战指南。
+个人 macOS 使用经验记录。从零上手到用顺手——踩过的坑、用顺手的工具、形成的习惯都在这。
 
 在线阅读：[macos-playbook.chendahuang.top](https://macos-playbook.chendahuang.top/)
 

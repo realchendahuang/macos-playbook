@@ -2,7 +2,7 @@
   "name": "macos-playbook",
   "version": "0.1.0",
   "private": true,
-  "description": "一份帮助普通人真正把 macOS 用顺手的中文实战手册。",
+  "description": "个人 macOS 使用经验记录：从零上手到用顺手，踩过的坑、用顺手的工具、形成的习惯都在这。",
   "type": "module",
   "engines": {
     "node": ">=22.12.0"
