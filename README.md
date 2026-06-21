@@ -1,31 +1,19 @@
-# macOS Best Practices
+# macOS 高效使用手册
 
-一份帮助普通人真正把 macOS 用顺手的中文单页最佳实践手册。
+别人告诉你 Mac 装什么软件，我告诉你 Mac 到底应该怎么用。
 
 在线阅读：[macos-best-practices.chendahuang.top](https://macos-best-practices.chendahuang.top/)
-
-> [!TIP]
-> 别人告诉你 Mac 装什么软件，我告诉你 Mac 到底应该怎么用。
-
-这不是软件合集，而是一份单页版 macOS 使用最佳实践手册。它解决的问题是：一个人买了 Mac 之后，如何理解 macOS，如何从 Windows 心智切换过来，如何掌握快捷键、Finder、窗口、Spotlight、终端和 AI Coding 工作流。
 
 ## 全景图
 
 ```mermaid
 flowchart TD
-  A[macOS 高效使用手册] --> B[1. 从 Windows 切到 macOS]
-  A --> C[2. macOS 心智模型]
-  A --> D[3. 快捷键基础]
-  A --> E[4. 日常效率]
-  A --> F[5. 终端、开发与 AI Coding]
-  A --> G[6. 软件选择与常见问题]
-  E --> E1[Finder]
-  E --> E2[窗口管理]
-  E --> E3[Spotlight]
-  E --> E4[截图和录屏]
-  E --> E5[文本编辑]
-  G --> G1[工具选择]
-  G --> G2[高频问题]
+  A[macOS 高效使用] --> B[迁移心智]
+  A --> C[系统模型]
+  A --> D[快捷键]
+  A --> E[日常效率]
+  A --> F[开发与 AI Coding]
+  A --> G[工具与排障]
 ```
 
 ## 目录
@@ -37,6 +25,10 @@ flowchart TD
 - [5. 终端、开发与 AI Coding](#5-终端开发与-ai-coding)
 - [6. 软件选择与常见问题](#6-软件选择与常见问题)
 - [官方资料](#官方资料)
+
+> 别人告诉你 Mac 装什么软件，我告诉你 Mac 到底应该怎么用。
+
+这不是软件合集，而是一份单页版 macOS 使用最佳实践手册。它解决的问题是：一个人买了 Mac 之后，如何理解 macOS，如何从 Windows 心智切换过来，如何掌握快捷键、Finder、窗口、Spotlight、终端和 AI Coding 工作流。
 
 ## 1. 从 Windows 切到 macOS
 
@@ -308,14 +300,3 @@ pnpm run build
 - [Git: First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 - [GitHub Docs: Generate a new SSH key and add it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 - [OpenAI Codex documentation](https://developers.openai.com/codex/)
-
-<details>
-<summary>本地开发</summary>
-
-```bash
-pnpm install
-pnpm run build
-pnpm run deploy
-```
-
-</details>

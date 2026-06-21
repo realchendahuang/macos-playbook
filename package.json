@@ -9,27 +9,20 @@
   },
   "packageManager": "pnpm@10.28.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "typecheck": "tsc --noEmit --skipLibCheck --lib ES2022,WebWorker --types ./worker-configuration src/worker.ts",
-    "worker:dev": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "dev": "vitepress dev docs --host 127.0.0.1",
+    "start": "vitepress dev docs --host 127.0.0.1",
+    "build": "pnpm sync:readme && vitepress build docs",
+    "preview": "vitepress preview docs --host 127.0.0.1",
+    "sync:readme": "node scripts/sync-readme.mjs",
+    "deploy": "pnpm build && wrangler deploy"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/realchendahuang/macos-best-practices.git"
   },
-  "dependencies": {
-    "@astrojs/starlight": "^0.40.0",
-    "astro": "^6.4.7",
-    "lucode-starlight": "^0.1.6",
-    "sharp": "^0.34.5"
-  },
   "devDependencies": {
-    "typescript": "^5.9.3",
-    "wrangler": "^4.56.0"
+    "lucide-vue-next": "^1.0.0",
+    "vitepress": "^1.6.4",
+    "wrangler": "^4.100.0"
   }
 }
