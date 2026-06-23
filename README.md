@@ -2,7 +2,7 @@
 
 个人 macOS 使用经验记录。从零上手到用顺手——踩过的坑、用顺手的工具、形成的习惯都在这。
 
-在线阅读：[macos-playbook.chendahuang.top](https://macos-playbook.chendahuang.top/)
+在线阅读：[chendahuang.com/playbook/macos](https://chendahuang.com/playbook/macos/)
 
 ## 全景图
 
