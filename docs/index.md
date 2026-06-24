@@ -4,7 +4,7 @@ outline: deep
 ---
 
 <script setup>
-import { Package, Command, Share2, Zap, Code, Wrench, Shield, ArrowRightLeft } from 'lucide-vue-next'
+import { Package, Command, Share2, Zap, Code, Wrench, Shield, ArrowRightLeft } from '@lucide/vue'
 </script>
 
 <!-- README:START_HIDDEN -->

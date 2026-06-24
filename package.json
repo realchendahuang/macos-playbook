@@ -23,9 +23,16 @@
     "url": "https://github.com/realchendahuang/macos-playbook.git"
   },
   "devDependencies": {
-    "lucide-vue-next": "^1.0.0",
+    "@lucide/vue": "^1.21.0",
     "vitepress": "^1.6.4",
     "vitepress-plugin-mermaid": "^2.0.17",
-    "wrangler": "^4.100.0"
+    "wrangler": "^4.104.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "workerd"
+    ]
   }
 }
