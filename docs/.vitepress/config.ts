@@ -13,6 +13,14 @@ export default withMermaid(
     sitemap: {
       hostname: 'https://chendahuang.com/playbook/macos/'
     },
+    vite: {
+      build: {
+        // Mermaid's runtime and Wardley parser chunks are intentionally about 600 KB
+        // uncompressed. Keep the warning close to that measured size so real growth
+        // still shows up.
+        chunkSizeWarningLimit: 700
+      }
+    },
     head: [
       ['link', { rel: 'icon', type: 'image/svg+xml', href: '/playbook/macos/favicon.svg' }]
     ],

@@ -235,6 +235,10 @@ flowchart TD
 
   本地优先的笔记软件。所有数据存在本地，文件就是纯 Markdown，不怕被平台锁死。插件生态丰富。官方 Web Clipper 能把网页、高亮存进笔记库。已有知识库就别为了"开源洁癖"硬迁移，折腾自己没必要。
 
+- **[Typora](https://typora.io/)** ★★★★☆ · 单文件 Markdown 写作
+
+  所见即所得的 Markdown 编辑器，适合写单篇文章、README、长文草稿。它不是知识库，更像一把顺手的 Markdown 写字刀：打开快、预览舒服、导出也省心。付费买断，先试用，喜欢再买。
+
 - **[Zotero](https://www.zotero.org/)** ★★★★★ · 读论文/写文章必装 · [GitHub](https://github.com/zotero/zotero)
 
   文献管理神器，收集、整理、引用、批注都强。读论文、写文章、做研究都该装。免费开源。
@@ -246,6 +250,10 @@ flowchart TD
 - **[Skim](https://skim-app.sourceforge.io/)** ★★★★☆ · PDF 批注
 
   PDF 阅读和批注工具，特别适合读论文。免费开源。
+
+- **[ima.copilot](https://ima.qq.com/)** ★★★★☆ · 国内 AI 知识库
+
+  腾讯出的 AI 工作台，偏"搜、读、写 + 知识库"。如果你的资料大量来自微信公众号、网页、会议录音、中文文档，它会比纯聊天机器人更顺手。注意它是云端产品，私密资料、客户资料、公司内部文档不要无脑往里丢。
 
 - **Obsidian 替代（按需）**：[Logseq](https://logseq.com/)（本地优先、大纲式、开源）、[Joplin](https://joplinapp.org/)（开源、支持同步加密）。不想用 Obsidian 的人可以看，但已经有 Obsidian 就别折腾。
 
@@ -274,6 +282,10 @@ flowchart TD
 - **[VSCodium](https://vscodium.com/)** ★★★★☆ · 无遥测 VS Code · [GitHub](https://github.com/VSCodium/vscodium)
 
   VS Code 的自由开源构建版本，去掉微软遥测。生态还是 VS Code 生态。免费开源。
+
+- **[TRAE / TRAE CN](https://www.trae.ai/)** ★★★★☆ · AI IDE 候选
+
+  字节出的 AI IDE。国际版和国内版模型、账号、网络环境不完全一样，可以按使用场景二选一；如果你经常让 AI 读项目、改代码、生成页面，它适合和 Cursor、VS Code 放在同一类里比较。别因为免费就把主力项目全迁过去，先拿小项目试稳定性和模型质量。
 
 - **[Bruno](https://www.usebruno.com/)** ★★★★★ · API 调试首选 · [GitHub](https://github.com/usebruno/bruno)
 
@@ -1137,7 +1149,7 @@ Host nas
 | --- | --- | --- |
 | 包管理 | Homebrew | 先装这个 |
 | 版本管理 | Git | |
-| 代码编辑 | VS Code / Cursor | Cursor 内置 AI |
+| 代码编辑 | VS Code / Cursor / TRAE | Cursor、TRAE 都是 AI IDE 路线 |
 | 终端 | iTerm2 | 比 Terminal 好用很多 |
 | 远程认证 | SSH key | |
 | 浏览器 | Arc / Brave | 开发用 Chrome 内核 |
@@ -1147,6 +1159,15 @@ Host nas
 ### 5.6 AI Coding 工作流
 
 我的 AI Coding 工作流：
+
+常见工具先这么分：
+
+| 工具 | 适合场景 | 注意 |
+| --- | --- | --- |
+| Cursor | VS Code 生态 + AI 改代码 | 生态成熟，订阅成本要算 |
+| TRAE / TRAE CN | 想试免费或国内模型的 AI IDE | 国际版和国内版分开看，别混着评估 |
+| VS Code / VSCodium | 插件生态和传统开发 | AI 能力靠插件补 |
+| Zed | 追求轻快和现代编辑体验 | 插件生态还在长 |
 
 ```mermaid
 flowchart TD

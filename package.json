@@ -11,9 +11,11 @@
   "scripts": {
     "dev": "vitepress dev docs --host 127.0.0.1",
     "start": "vitepress dev docs --host 127.0.0.1",
-    "build": "pnpm sync:readme && vitepress build docs",
+    "build": "pnpm clean:dist && pnpm sync:readme && vitepress build docs",
     "preview": "vitepress preview docs --host 127.0.0.1",
+    "clean:dist": "node scripts/clean-dist.mjs",
     "sync:readme": "node scripts/sync-readme.mjs",
+    "deploy:quick": "node scripts/deploy.mjs",
     "deploy": "pnpm build && wrangler deploy"
   },
   "repository": {
