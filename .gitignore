@@ -2,5 +2,6 @@ node_modules/
 dist/
 .astro/
 .wrangler/
+docs/.vitepress/cache/
 .DS_Store
 *.log

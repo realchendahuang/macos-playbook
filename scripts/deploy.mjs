@@ -64,7 +64,7 @@ console.log(`\nDeploying ${packageJson.name}${dryRun ? ' (dry run)' : ''}\n`);
 run('pnpm', ['exec', 'wrangler', 'whoami']);
 
 if (!skipBuild) {
-  run('pnpm', ['build']);
+  run('pnpm', ['check']);
 }
 
 run('pnpm', ['exec', 'wrangler', 'deploy', ...(dryRun ? ['--dry-run'] : []), ...passthroughArgs]);

@@ -5,7 +5,8 @@
 pnpm dev
 
 # 检查
-pnpm build
+pnpm check
+pnpm types
 pnpm preview
 
 # 快速部署到 Cloudflare Workers

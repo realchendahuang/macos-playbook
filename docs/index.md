@@ -1185,7 +1185,7 @@ flowchart TD
 给 AI 的信息格式（越具体越好）：
 
 ```text
-项目目录：/Users/kim/code/macos-playbook
+项目目录：~/code/macos-playbook
 目标：把本站改成 8 模块结构
 限制：不要拆二级页面，保持单页
 验证：最后运行 pnpm run build

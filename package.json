@@ -2,6 +2,7 @@
   "name": "macos-playbook",
   "version": "0.1.0",
   "private": true,
+  "license": "CC-BY-SA-4.0",
   "description": "个人 macOS 使用经验记录：从零上手到用顺手，踩过的坑、用顺手的工具、形成的习惯都在这。",
   "type": "module",
   "engines": {
@@ -12,21 +13,26 @@
     "dev": "vitepress dev docs --host 127.0.0.1",
     "start": "vitepress dev docs --host 127.0.0.1",
     "build": "pnpm clean:dist && pnpm sync:readme && vitepress build docs",
+    "types": "wrangler types --include-runtime false",
+    "typecheck": "wrangler types --check --include-runtime false && tsc --noEmit",
+    "check": "pnpm build && pnpm typecheck",
     "preview": "vitepress preview docs --host 127.0.0.1",
     "clean:dist": "node scripts/clean-dist.mjs",
     "sync:readme": "node scripts/sync-readme.mjs",
     "deploy:quick": "node scripts/deploy.mjs",
-    "deploy": "pnpm build && wrangler deploy"
+    "deploy": "pnpm check && wrangler deploy"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/realchendahuang/macos-playbook.git"
   },
   "devDependencies": {
-    "@lucide/vue": "^1.21.0",
+    "@cloudflare/workers-types": "^5.20260710.1",
+    "@lucide/vue": "^1.24.0",
+    "typescript": "^7.0.2",
     "vitepress": "^1.6.4",
     "vitepress-plugin-mermaid": "^2.0.17",
-    "wrangler": "^4.104.0"
+    "wrangler": "^4.110.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
