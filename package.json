@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "vitepress dev docs --host 127.0.0.1",
     "start": "vitepress dev docs --host 127.0.0.1",
-    "build": "pnpm clean:dist && pnpm sync:readme && vitepress build docs",
+    "build": "pnpm clean:dist && pnpm sync:readme && vitepress build docs && node scripts/finalize-dist.mjs",
     "types": "wrangler types --include-runtime false",
     "typecheck": "wrangler types --check --include-runtime false && tsc --noEmit",
     "check": "pnpm build && pnpm typecheck",
