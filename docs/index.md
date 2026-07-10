@@ -46,6 +46,10 @@ import { Package, Command, Share2, Zap, Code, Wrench, Shield, ArrowRightLeft } f
 
   免费开源的窗口管理。`Option + 方向键` 把窗口推到左半屏、右半屏、上半屏、居中、最大化。从 Windows 过来的人装上立刻顺手。进阶可上 Rectangle Pro，支持布局记忆和快捷手势。
 
+- **[AeroSpace](https://nikitabobko.github.io/AeroSpace/guide)** ★★★★☆ · 键盘平铺进阶 · [GitHub](https://github.com/nikitabobko/AeroSpace)
+
+  i3 风格的平铺窗口管理器，用配置文件和键盘工作区管理窗口。适合固定多窗口布局、习惯键盘操作的开发者；普通用户仍先装 Rectangle，别为了“自动平铺”把简单问题复杂化。
+
 - **[AltTab](https://alt-tab.app/)** ★★★★☆ · 多窗口用户刚需 · [GitHub](https://github.com/lwouis/alt-tab)
 
   让 `Command + Tab` 切换像 Windows 一样能看到具体窗口，而不只是 App 图标。开了一堆窗口的人装上立刻舒服。免费开源。
@@ -54,7 +58,7 @@ import { Package, Command, Share2, Zap, Code, Wrench, Shield, ArrowRightLeft } f
 
   菜单栏图标管理。把不常用的菜单栏图标折叠起来，需要时展开。免费开源，Bartender 的平替。菜单栏空间紧张的必装。
 
-- **[Stats](https://mac-stats.com/)** ★★★★☆ · 常驻 · [GitHub](https:///exaition/Stats)
+- **[Stats](https://mac-stats.com/)** ★★★★☆ · 常驻 · [GitHub](https://github.com/exelban/stats)
 
   菜单栏系统监控，CPU、GPU、内存、网速、电池、温度都能看。比一堆国产管家清爽。免费开源。
 
@@ -62,7 +66,7 @@ import { Package, Command, Share2, Zap, Code, Wrench, Shield, ArrowRightLeft } f
 
   接第三方显示器的 Mac 用户基本都该装。用 Mac 的键盘控制外接显示器的亮度和音量，不用再伸手按显示器按钮。免费开源。
 
-- **[BetterDisplay](https://betterdisplay.pro/)** ★★★★☆ · 按需 · [GitHub](https://github.com/MonitorControl/MonitorControl)
+- **[BetterDisplay](https://betterdisplay.pro/)** ★★★★☆ · 按需 · [GitHub](https://github.com/waydabber/BetterDisplay)
 
   外接屏、HiDPI、虚拟屏、显示器调校的高级工具。免费版能用，深度功能偏付费。外接屏有疑难杂症再上它。
 
@@ -260,15 +264,15 @@ import { Package, Command, Share2, Zap, Code, Wrench, Shield, ArrowRightLeft } f
 
 > 这一类是开发向的，详细用法和配置见 [第 5 节：开发与 AI](#dev-ai)。这里只列工具清单。
 
-- **[iTerm2](https://iterm2.com/)** ★★★★☆ · 开发必装
+- **[iTerm2](https://iterm2.com/)** ★★★★☆ · 成熟稳定
 
-  macOS 终端的事实标准。分屏、热键窗口、搜索、shell integration、图片预览。免费。
+  老牌终端，分屏、热键窗口、搜索、shell integration 和 profile 管理都很成熟。已有复杂配置就继续用；新装机想要更轻、更原生，优先看 Ghostty。
 
 - **[Warp](https://www.warp.dev/)** ★★★★☆ · 可选
 
   现代化终端，把命令行做成 IDE 那样。按块显示输入和输出，搜索历史命令像聊天记录，内置 AI 补全。免费版够用。
 
-- **[Ghostty](https://ghostty.org/)** ★★★★★ · 新一代终端 · [GitHub](https://github.com/ghostty-org/ghostty)
+- **[Ghostty](https://ghostty.org/)** ★★★★★ · 开发首选 · [GitHub](https://github.com/ghostty-org/ghostty)
 
   新一代终端，快、原生、GPU 渲染，体验很现代。现在我会优先推荐它，而不是继续抱着 iTerm2 当传家宝。免费开源。
 
@@ -962,8 +966,11 @@ macOS 自带的分屏（长按绿色按钮）效率不够，推荐用工具：
 | --- | --- | --- |
 | Rectangle | 免费开源 | 键盘快捷键为主，够用 |
 | Rectangle Pro | 买断 | 布局记忆、拖到手势、跨显示器 |
-| Amethyst | 免费开源 | 自动平铺窗口，键盘党专用 |
+| AeroSpace | 免费开源 | i3 风格自动平铺、工作区和配置文件，键盘党优先 |
+| Amethyst | 免费开源 | 老牌自动平铺方案，已有配置可继续用 |
 | Raycast + Rectangle 扩展 | 免费 | 在 Raycast 里直接窗口管理 |
+
+默认选 Rectangle；只有当你明确需要“窗口自动排布 + 多工作区 + 配置即代码”时再上 AeroSpace。两类工具的心智模型不同，不需要一起常驻。
 
 我最常用的 Rectangle 快捷键：
 
@@ -1015,7 +1022,7 @@ flowchart LR
 
 | 词 | 意思 |
 | --- | --- |
-| Terminal | 打开命令行的 App（推荐用 iTerm2 替代） |
+| Terminal | 打开命令行的 App；系统自带版够入门，想升级优先试 Ghostty |
 | Shell | 接收命令的程序，macOS 默认 zsh |
 | 当前目录 | 命令执行的位置 |
 | PATH | 系统查找命令的路径列表 |
@@ -1147,7 +1154,7 @@ Host nas
 | 包管理 | Homebrew | 先装这个 |
 | 版本管理 | Git | |
 | 代码编辑 | VS Code / Cursor / TRAE | Cursor、TRAE 都是 AI IDE 路线 |
-| 终端 | iTerm2 | 比 Terminal 好用很多 |
+| 终端 | Ghostty / iTerm2 | 新装优先 Ghostty；需要成熟 profile 和热键窗口选 iTerm2 |
 | 远程认证 | SSH key | |
 | 浏览器 | Arc / Brave | 开发用 Chrome 内核 |
 | Node 版本管理 | fnm / nvm | 多项目切版本 |
@@ -1216,7 +1223,7 @@ pnpm run build
 1. **上下文不够**：AI 只看到你给的文件。改一个功能可能要让它先读 3-5 个相关文件。
 2. **改了不该改的**：每次让 AI 改完，先看 diff 再提交。`git diff` 是你的朋友。
 3. **死循环报错**：AI 修了 A 又坏了 B，修了 B 又坏了 A。这时候停下来，自己读完代码再说。
-4. **不要让 AI 直接 push**：AI 改完先本地验证，确认没问题再提交。
+4. **不要让 AI 未经授权直接 push**：默认先看 diff、跑验证；在可信仓库里，如果你已经明确要求发布，并约定了检查、提交和回滚边界，可以让 AI 完成 commit、push 和 deploy。
 :::
 
 ### 5.7 我的配置文件
@@ -1291,7 +1298,7 @@ brew "tree"
 # 图形界面 App
 cask "raycast"
 cask "rectangle"
-cask "iterm2"
+cask "ghostty"
 cask "visual-studio-code"
 cask "obsidian"
 cask "arc"
