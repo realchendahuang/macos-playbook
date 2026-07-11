@@ -76,8 +76,9 @@
   stroke-width: 2;
 }
 
-.vp-doc p {
-  font-size: 15px;
+.vp-doc p,
+.vp-doc li {
+  font-size: 16px;
   line-height: 1.75;
 }
 
@@ -226,8 +227,14 @@
 
 .quick-grid span {
   color: var(--vp-c-text-2);
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.5;
+}
+
+.VPNavScreenMenuGroupLink {
+  min-height: 44px;
+  line-height: 44px !important;
+  touch-action: manipulation;
 }
 
 .callout-strip {
@@ -261,6 +268,21 @@
 @media (min-width: 1101px) and (max-width: 1400px) {
   .quick-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .quick-grid a:hover {
+    transform: none;
   }
 }
 
