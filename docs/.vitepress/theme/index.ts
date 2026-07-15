@@ -1,5 +1,19 @@
 import DefaultTheme from 'vitepress/theme-without-fonts';
+import type { Theme } from 'vitepress';
 import './style.css';
+import { setupPlaybookMotion } from './motion';
 
-// 复用默认主题，只覆盖单页手册需要的视觉细节。
-export default DefaultTheme;
+const theme: Theme = {
+  extends: DefaultTheme,
+  enhanceApp({ router }) {
+    if (typeof window === 'undefined') return;
+
+    let cleanup = setupPlaybookMotion();
+    router.onAfterRouteChange = () => {
+      cleanup();
+      cleanup = setupPlaybookMotion();
+    };
+  }
+};
+
+export default theme;

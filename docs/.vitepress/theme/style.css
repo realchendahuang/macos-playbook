@@ -286,6 +286,49 @@
   }
 }
 
+/* Shared Playbook landing page structure. */
+.playbook-home-page .VPDoc { padding-top: 0; }
+.playbook-home-page .VPDoc .container, .playbook-home-page .VPDoc .content, .playbook-home-page .VPDoc .content-container { width: 100%; max-width: none !important; padding: 0 !important; }
+.playbook-home-page .vp-doc > h1, .playbook-home-page .vp-doc > h2 { display: none; }
+.playbook-home { width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 78px 0 96px; }
+.playbook-hero { position: relative; display: grid; grid-template-columns: minmax(0, 8fr) minmax(240px, 4fr); gap: 48px; align-items: end; padding: 10px 0 64px; border-bottom: 1px solid var(--vp-c-divider); }
+.playbook-hero::before { content: ''; position: absolute; top: 10px; left: 0; width: 48px; height: 4px; background: var(--vp-c-brand-1); }
+.playbook-hero h1 { display: block !important; max-width: 15ch; margin: 32px 0 22px; font-size: clamp(46px, 6vw, 76px); line-height: 1.02; letter-spacing: -0.055em; font-weight: 780; }
+.playbook-hero p { max-width: 610px; margin: 0; color: var(--vp-c-text-2); font-size: 18px; line-height: 1.65; }
+.playbook-actions { display: flex; flex-direction: column; gap: 10px; align-items: stretch; }
+.playbook-action { display: flex; min-height: 48px; align-items: center; justify-content: space-between; gap: 16px; padding: 0 16px; border: 1px solid var(--vp-c-divider); border-radius: 6px; color: var(--vp-c-text-1) !important; font-size: 14px; font-weight: 650; text-decoration: none !important; transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease; }
+.playbook-action.primary { border-color: var(--vp-c-brand-1); background: var(--vp-c-brand-1); color: #fff !important; }
+.playbook-action:hover, .playbook-action:focus-visible { border-color: var(--vp-c-brand-1); background: var(--vp-c-brand-soft); color: var(--vp-c-brand-1) !important; }
+.playbook-action.primary:hover, .playbook-action.primary:focus-visible { background: var(--vp-c-brand-2); color: #fff !important; }
+.playbook-section { padding: 58px 0 0; }
+.playbook-section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
+.playbook-section-head h2 { display: block !important; margin: 0; padding: 0; border: 0; font-size: 26px; line-height: 1.25; }
+.playbook-section-head p { margin: 0; color: var(--vp-c-text-2); font-size: 14px; }
+.chapter-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--vp-c-divider); }
+.chapter-link { display: grid; grid-template-columns: 44px minmax(0, 1fr) 18px; gap: 14px; align-items: start; min-height: 126px; padding: 24px 18px 24px 0; border-bottom: 1px solid var(--vp-c-divider); color: var(--vp-c-text-1) !important; text-decoration: none !important; }
+.chapter-link:nth-child(odd) { padding-right: 28px; border-right: 1px solid var(--vp-c-divider); }
+.chapter-link:nth-child(even) { padding-left: 28px; }
+.chapter-link:hover { background: linear-gradient(90deg, var(--vp-c-brand-soft), transparent 72%); color: var(--vp-c-brand-1) !important; }
+.chapter-number { color: var(--vp-c-text-3); font-family: var(--vp-font-family-mono); font-size: 12px; font-variant-numeric: tabular-nums; }
+.chapter-title, .chapter-description { display: block; }.chapter-title { margin-bottom: 8px; font-size: 18px; line-height: 1.35; font-weight: 680; }.chapter-description { color: var(--vp-c-text-2); font-size: 14px; line-height: 1.6; }.chapter-arrow { color: var(--vp-c-text-3); font-size: 18px; line-height: 1; transition: transform 180ms ease; }.chapter-link:hover .chapter-arrow { transform: translateX(3px); }
+.playbook-family { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--vp-c-divider); border-left: 0; border-right: 0; }.playbook-family-link { min-height: 84px; padding: 20px; border-right: 1px solid var(--vp-c-divider); color: var(--vp-c-text-1) !important; text-decoration: none !important; }.playbook-family-link:last-child { border-right: 0; }.playbook-family-link:hover { background: var(--vp-c-brand-soft); color: var(--vp-c-brand-1) !important; }.playbook-family-link strong, .playbook-family-link span { display: block; }.playbook-family-link strong { margin-bottom: 5px; font-size: 15px; }.playbook-family-link span { color: var(--vp-c-text-2); font-size: 12px; line-height: 1.45; }
+@media (max-width: 960px) { .playbook-home { width: min(100% - 40px, 1180px); padding-top: 54px; }.playbook-hero { grid-template-columns: 1fr; gap: 32px; }.playbook-actions { max-width: 420px; flex-direction: row; }.playbook-action { flex: 1; }.playbook-family { grid-template-columns: repeat(2, minmax(0, 1fr)); }.playbook-family-link:nth-child(2) { border-right: 0; }.playbook-family-link:nth-child(-n + 2) { border-bottom: 1px solid var(--vp-c-divider); } }
+@media (max-width: 640px) { .playbook-home { width: calc(100% - 40px); padding: 42px 0 64px; }.playbook-hero { gap: 26px; padding: 8px 0 38px; }.playbook-hero h1 { margin: 26px 0 16px; font-size: clamp(38px, 12vw, 52px); }.playbook-hero p { font-size: 16px; }.playbook-actions { max-width: none; flex-direction: column; }.playbook-section { padding-top: 42px; }.playbook-section-head { display: block; margin-bottom: 18px; }.playbook-section-head p { margin-top: 8px; }.chapter-list, .playbook-family { grid-template-columns: 1fr; }.chapter-link, .chapter-link:nth-child(odd), .chapter-link:nth-child(even) { min-height: 96px; padding: 18px 0; border-right: 0; }.playbook-family-link, .playbook-family-link:nth-child(2), .playbook-family-link:last-child { min-height: 68px; padding: 15px 0; border-right: 0; border-bottom: 1px solid var(--vp-c-divider); }.playbook-family-link:last-child { border-bottom: 0; } }
+
+@keyframes playbook-fade-blur {
+  from { opacity: 0; transform: translateY(12px); filter: blur(7px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+.motion-enter { animation: playbook-fade-blur 720ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+.playbook-hero > .motion-enter:nth-child(2) { animation-delay: 100ms; }
+.motion-reveal { opacity: 0; transform: translateY(16px); transition: opacity 640ms cubic-bezier(0.22, 1, 0.36, 1) var(--motion-delay, 0ms), transform 640ms cubic-bezier(0.22, 1, 0.36, 1) var(--motion-delay, 0ms); }
+.motion-reveal.motion-revealed { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-enter, .motion-reveal, .motion-reveal.motion-revealed { opacity: 1; transform: none; filter: none; animation: none; transition: none; }
+}
+
 /* Mermaid 图表容器 */
 .vp-doc .mermaid-wrapper {
   margin: 24px 0;
